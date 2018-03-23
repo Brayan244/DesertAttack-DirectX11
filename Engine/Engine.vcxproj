@@ -81,9 +81,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cameraclass.cpp" />
-    <ClCompile Include="Cilindro.cpp" />
-    <ClCompile Include="Cono.cpp" />
-    <ClCompile Include="Cubo.cpp" />
     <ClCompile Include="d3dclass.cpp" />
     <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="graphicsclass.cpp" />
@@ -92,16 +89,11 @@
     <ClCompile Include="lightshaderclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelclass.cpp" />
-    <ClCompile Include="Rombo.cpp" />
     <ClCompile Include="systemclass.cpp" />
     <ClCompile Include="textureclass.cpp" />
-    <ClCompile Include="Toroide.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraclass.h" />
-    <ClInclude Include="Cilindro.h" />
-    <ClInclude Include="Cono.h" />
-    <ClInclude Include="Cubo.h" />
     <ClInclude Include="d3dclass.h" />
     <ClInclude Include="Esfera.h" />
     <ClInclude Include="graphicsclass.h" />
@@ -109,11 +101,9 @@
     <ClInclude Include="lightclass.h" />
     <ClInclude Include="lightshaderclass.h" />
     <ClInclude Include="modelclass.h" />
-    <ClInclude Include="Rombo.h" />
     <ClInclude Include="SphereClass.h" />
     <ClInclude Include="systemclass.h" />
     <ClInclude Include="textureclass.h" />
-    <ClInclude Include="Toroide.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="light_ps.hlsl" />
