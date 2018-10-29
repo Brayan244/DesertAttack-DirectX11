@@ -9,8 +9,6 @@ GraphicsClass::GraphicsClass()
 	m_D3D = NULL;
 	m_Camera = NULL;
 	m_Sun = NULL;
-	m_Sun2 = NULL;
-	m_Cadena = NULL;
 	m_LightShader = NULL;
 	m_Light = NULL;
 
@@ -34,14 +32,14 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 
 	// Create the Direct3D object.
 	m_D3D = new D3DClass;
-	if(!m_D3D)
+	if (!m_D3D)
 	{
 		return false;
 	}
 
 	// Initialize the Direct3D object.
 	result = m_D3D->Initialize(screenWidth, screenHeight, VSYNC_ENABLED, hwnd, FULL_SCREEN, SCREEN_DEPTH, SCREEN_NEAR);
-	if(!result)
+	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize Direct3D.", L"Error", MB_OK);
 		return false;
@@ -49,43 +47,41 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 
 	// Create the camera object.
 	m_Camera = new CameraClass;
-	if(!m_Camera)
+	if (!m_Camera)
 	{
 		return false;
 	}
 
 	// Set the initial position of the camera.
 	m_Camera->SetPosition(0.0f, 0.0f, -10.0f);
-	
+
 	// Create the model object.
 	m_Sun = new Esfera;
-	if(!m_Sun)
+	if (!m_Sun)
 	{
 		return false;
 	}
 
 	// Initialize the model object.
 	result = m_Sun->Initialize(m_D3D->GetDevice(), "../Engine/data/cube.txt", L"../Engine/data/sun.jpg");
-	if(!result)
-	{
-		MessageBox(hwnd, L"Could not initialize the model object.", L"Error", MB_OK);
-		return false;
-	}
-
-	m_Sun2 = new Esfera;
-	if (!m_Sun2)
-	{
-		return false;
-	}
-
-	// Initialize the model object.
-	result = m_Sun2->Initialize(m_D3D->GetDevice(), "../Engine/data/cube.txt", L"../Engine/data/grass.jpg");
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the model object.", L"Error", MB_OK);
 		return false;
 	}
 
+	// Initialize the terrain object
+	terrain = new TerrainClass();
+
+	if (!terrain)
+		return false;
+
+	result = terrain->Initialize(m_D3D->GetDevice(), "../Engine/data/terrain.bmp", 10);
+	if (!result)
+	{
+		MessageBox(hwnd, L"Could not initialize the terrain object.", L"Error", MB_OK);
+		return false;
+	}
 
 	// Create the light shader object.
 	m_LightShader = new LightShaderClass;

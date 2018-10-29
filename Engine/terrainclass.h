@@ -11,6 +11,7 @@
 #include <d3d11.h>
 #include <d3dx10math.h>
 #include <stdio.h>
+#include "textureclass.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -82,12 +83,18 @@ private:
 	void ReleaseBuffers();
 
 	void RenderBuffers(ID3D11DeviceContext*);
+	bool LoadTexturesAndNormals();
 
 private:
 	int m_terrainWidth, m_terrainHeight, m_vertexCount, m_indexCount;
 	HeightMapType* m_heightMap;
 	ModelType* m_model;
 	ID3D11Buffer *m_vertexBuffer, *m_indexBuffer;
+	TextureClass* m_DesertTexture, *m_GravelTexture, *m_BrickTexture;
+	TextureClass* m_DesertNormal, *m_GravelNormal, *m_BrickNormal;
+	TextureClass* m_BlendMap;
 };
+
+
 
 #endif

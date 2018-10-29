@@ -14,6 +14,7 @@
 #include "lightshaderclass.h"
 #include "lightclass.h"
 #include "Esfera.h"
+#include "terrainclass.h"
 
 /////////////
 // GLOBALS //
@@ -45,12 +46,11 @@ private:
 	D3DClass* m_D3D;
 	CameraClass* m_Camera;
 	ModelClass *m_Sun;
-	ModelClass *m_Sun2;
-	ModelClass** m_Cadena;
 	LightShaderClass* m_LightShader;
 	LightClass* m_Light;
 	TextureClass* m_TextDirt;
 	TextureClass* m_Blend;
+	TerrainClass* terrain;
 	
 };
 
