@@ -45,22 +45,10 @@
     <ClCompile Include="textureclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cubo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Esfera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Toroide.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cono.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rombo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cilindro.cpp">
+    <ClCompile Include="terrainshaderclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,22 +83,13 @@
     <ClInclude Include="SphereClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cubo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Esfera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Toroide.h">
+    <ClInclude Include="terrainclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cono.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rombo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Cilindro.h">
+    <ClInclude Include="terrainshaderclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -125,6 +104,12 @@
       <Filter>Shader Files</Filter>
     </None>
     <None Include="light_vs.hlsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="terrain_ps.hlsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="terrain_vs.hlsl">
       <Filter>Shader Files</Filter>
     </None>
   </ItemGroup>

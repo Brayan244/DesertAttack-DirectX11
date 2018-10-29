@@ -227,7 +227,7 @@ bool GraphicsClass::Render(float rotation)
 	// Clear the buffers to begin the scene.
 	m_D3D->BeginScene(0.0f, 0.0f, 1.0f, 1.0f);
 
-	// Generate the view matrix based on the camera's position.
+	//// Generate the view matrix based on the camera's position.
 	m_Camera->Render();
 
 	// Get the world, view, and projection matrices from the camera and d3d objects.
@@ -254,7 +254,7 @@ bool GraphicsClass::Render(float rotation)
 		return false;
 	}
 
-	/////////////////////////////////////////////////////////////////////// 
+	///////////////////////////////////////////////////////////////////// 
 	//Dibujando un toroide
 	// Put the model vertex and index buffers on the graphics pipeline to prepare them for drawing.
 

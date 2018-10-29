@@ -13,12 +13,7 @@
 #include "modelclass.h"
 #include "lightshaderclass.h"
 #include "lightclass.h"
-#include "Cubo.h"
 #include "Esfera.h"
-#include "Toroide.h"
-#include "Cilindro.h"
-#include "Rombo.h"
-#include "Cono.h"
 
 /////////////
 // GLOBALS //

@@ -14,7 +14,7 @@
     <ProjectGuid>{3699430F-DA71-4E86-951A-245C9D7BCBEB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Engine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -81,9 +81,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cameraclass.cpp" />
-    <ClCompile Include="Cilindro.cpp" />
-    <ClCompile Include="Cono.cpp" />
-    <ClCompile Include="Cubo.cpp" />
     <ClCompile Include="d3dclass.cpp" />
     <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="graphicsclass.cpp" />
@@ -92,16 +89,12 @@
     <ClCompile Include="lightshaderclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelclass.cpp" />
-    <ClCompile Include="Rombo.cpp" />
     <ClCompile Include="systemclass.cpp" />
+    <ClCompile Include="terrainshaderclass.cpp" />
     <ClCompile Include="textureclass.cpp" />
-    <ClCompile Include="Toroide.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraclass.h" />
-    <ClInclude Include="Cilindro.h" />
-    <ClInclude Include="Cono.h" />
-    <ClInclude Include="Cubo.h" />
     <ClInclude Include="d3dclass.h" />
     <ClInclude Include="Esfera.h" />
     <ClInclude Include="graphicsclass.h" />
@@ -109,17 +102,19 @@
     <ClInclude Include="lightclass.h" />
     <ClInclude Include="lightshaderclass.h" />
     <ClInclude Include="modelclass.h" />
-    <ClInclude Include="Rombo.h" />
     <ClInclude Include="SphereClass.h" />
     <ClInclude Include="systemclass.h" />
+    <ClInclude Include="terrainclass.h" />
+    <ClInclude Include="terrainshaderclass.h" />
     <ClInclude Include="textureclass.h" />
-    <ClInclude Include="Toroide.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="light_ps.hlsl" />
     <None Include="light_vs.hlsl" />
     <None Include="color_ps.hlsl" />
     <None Include="color_vs.hlsl" />
+    <None Include="terrain_ps.hlsl" />
+    <None Include="terrain_vs.hlsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
